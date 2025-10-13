@@ -14,7 +14,6 @@ def mergeSort(arr):
     unmergeSortLeft = mergeSort(leftSort)
     unmergeSortRight = mergeSort(rightSort)
 
-
     return merge(unmergeSortLeft, unmergeSortRight)
 
 def merge(left, right):
@@ -39,7 +38,7 @@ def merge(left, right):
     while i < len(result):
         j=0
         while j < i:
-            if result[j] > result[i]:
+            if result[i] < result[j]:
                     placeholderVal = result[j]
                     result[j] = result[i]
                     result[i] = placeholderVal
