@@ -26,12 +26,16 @@ def merge(left, right):
         result.append(left[i])
         print(result)
         i+=1
+    
+    time.sleep(0.2)
 
     print("right: ")
     while j < len(right):
         result.append(right[j])
         print(result)
         j+=1
+
+    time.sleep(0.2)
 
     i = j = 0
 
@@ -44,11 +48,15 @@ def merge(left, right):
                     result[i] = placeholderVal
             j+=1
         i+=1
+    
+    time.sleep(0.2)
 
     print(f"sorted: {result}")
+    os.system('clear')
     return result
 
 
 unsortedArr = [12, 8, 9, 3, 11, 5, 4]
 sortedArr = mergeSort(unsortedArr)
 print(f"Final Sorted: {sortedArr}" )
+os.system('ls')
